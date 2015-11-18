@@ -1,0 +1,13 @@
+#autoload
+
+# Function rmpwd.
+# cd up one directory and rm -fr ${OLDPWD} 
+# eg:
+# [~]% cd test/test/test
+# [~/test/test/test]% rmpwd
+# [~/test/test]% rmpwd
+# [~/test]% rmpwd
+
+rmpwd () {
+  cd .. && rm -fr ${OLDPWD}
+}

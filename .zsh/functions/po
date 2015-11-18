@@ -1,0 +1,6 @@
+#autoload
+
+po () {
+  popd "$@"
+  dirs -v
+}

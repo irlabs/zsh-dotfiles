@@ -1,0 +1,7 @@
+setopt [ {+|-}options | {+|-}o option name ] [ name ... ]
+       Set  the  options  for  the shell.  All options specified either
+       with flags or by name are set.  If no  arguments  are  supplied,
+       the  names  of all options currently set are printed.  If the -m
+       flag is given the arguments are taken as patterns (which  should
+       be  quoted  to  protect  them  from filename expansion), and all
+       options with names matching these patterns are set.

@@ -1,0 +1,5 @@
+#autoload
+
+pst () {
+   pstree -p "$@" | less -S
+}

@@ -1,0 +1,14 @@
+#!/bin/zsh
+# Vim as less/pager (vim has syntax highlighting, and so colourized)
+# Note: This script requires the less.vim plugin.
+# Read stdin if no arguments were given.
+
+if [[ ! -f $HOME/.vim/plugins/less.vim ]]; then
+    print "For \"vless\" to function you need to get the less.vim plugin"
+    print "and install it in you ~/.vim folder"
+    exit 0
+elif [[ $# = 0 ]]; then
+  vim -c 'so $HOME/.vim/plugins/less.vim' -
+else
+  vim -c 'so $HOME/.vim/plugins/less.vim' $*
+fi

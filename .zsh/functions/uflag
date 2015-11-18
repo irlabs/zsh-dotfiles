@@ -1,0 +1,9 @@
+#autoload
+
+uflag () {
+
+for FLAG in $* 
+	do
+		grep ${FLAG} /usr/portage/profiles/use.desc
+	done
+} 

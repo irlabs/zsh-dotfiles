@@ -1,0 +1,33 @@
+cd [ -sLP ] [ arg ]
+cd [ -sLP ] old new
+cd [ -sLP ] {+|-}n
+       Change  the  current  directory.   In the first form, change the
+       current directory to arg, or to the value of $HOME if arg is not
+       specified.   If  arg is `-', change to the value of $OLDPWD, the
+       previous directory.  Otherwise, if a directory named arg is  not
+       found  in  the  current  directory and arg does not begin with a
+       slash, search each component of the shell parameter cdpath.   If
+       no  directory  is found and the option CDABLE VARS is set, and a
+       parameter named arg exists whose  value  begins  with  a  slash,
+       treat  its  value as the directory.  In that case, the parameter
+       is added to the named directory hash table.
+
+       The second form of cd substitutes the string new for the  string
+       old in the name of the current directory, and tries to change to
+       this new directory.
+
+       The third form of cd extracts an entry from the directory stack,
+       and  changes  to  that  directory.  An argument of the form `+n'
+       identifies a stack entry by counting from the left of  the  list
+       shown  by  the dirs command, starting with zero.  An argument of
+       the form `-n' counts from the right.  If the PUSHD MINUS  option
+       is set, the meanings of `+' and `-' in this context are swapped.
+
+       If the -s option is specified, cd refuses to change the  current
+       directory  if  the  given pathname contains symlinks.  If the -P
+       option is given or the CHASE LINKS option is set, symbolic links
+       are  resolved  to  their true values.  If the -L option is given
+       symbolic links are followed  regardless  of  the  state  of  the
+       CHASE LINKS option.
+
+chdir  Same as cd.

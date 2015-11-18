@@ -1,0 +1,5 @@
+#autoload
+
+function google () {
+  links 'http://www.google.com/search?q='${(j:+:)*}
+}

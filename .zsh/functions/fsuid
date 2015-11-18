@@ -1,0 +1,5 @@
+# autoload
+
+fsuid () {
+    ls -l /**/*(su0x)
+}

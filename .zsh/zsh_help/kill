@@ -1,0 +1,13 @@
+kill [ -s signal name | -n signal number | -sig ] job ...
+kill -l [ sig ... ]
+       Sends  either  SIGTERM or the specified signal to the given jobs
+       or processes.  Signals are given by number or by names, with  or
+       without  the  `SIG'  prefix.   If  the  signal being sent is not
+       `KILL' or `CONT', then the job will be sent a `CONT'  signal  if
+       it  is stopped.  The argument job can be the process ID of a job
+       not in the job list.  In the second form, kill -l, if sig is not
+       specified  the signal names are listed.  Otherwise, for each sig
+       that is a name, the corresponding signal number is listed.   For
+       each  sig  that  is a signal number or a number representing the
+       exit status of a process which was terminated or  stopped  by  a
+       signal the name of the signal is printed.

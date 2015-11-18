@@ -1,0 +1,45 @@
+fc [ -e ename ] [ -nlrdDfEim ] [ old=new ... ] [ first [ last ] ]
+fc -ARWI [ filename ]
+       Select  a  range of commands from first to last from the history
+       list.  The arguments first and last may be specified as a number
+       or  as  a string.  A negative number is used as an offset to the
+       current history event  number.   A  string  specifies  the  most
+       recent event beginning with the given string.  All substitutions
+       old=new, if any, are then performed on the commands.
+
+       If the -l flag is given, the resulting commands  are  listed  on
+       standard  output.   If the -m flag is also given the first argu-
+       ment is taken as a pattern (should be quoted) and only the  his-
+       tory  events matching this pattern will be shown.  Otherwise the
+       editor program ename is invoked on a file containing these  his-
+       tory  events.  If ename is not given, the value of the parameter
+       FCEDIT is used.  If ename is `-', no editor  is  invoked.   When
+       editing is complete, the edited command is executed.
+
+       If first is not specified, it will be set to -1 (the most recent
+       event), or to -16 if the -l flag is given.  If last is not spec-
+       ified,  it  will  be  set  to  first, or to -1 if the -l flag is
+       given.
+
+       The flag -r reverses the order of the commands and the  flag  -n
+       suppresses  command numbers when listing.  Also when listing, -d
+       prints timestamps for each command, and -f prints full time-date
+       stamps.   Adding  the  -E flag causes the dates to be printed as
+       `dd.mm.yyyy', instead of the default `mm/dd/yyyy'.   Adding  the
+       -i  flag  causes the dates to be printed in ISO8601 `yyyy-mm-dd'
+       format.  With the -D flag, fc prints elapsed times.
+
+       `fc -R' reads the history from the given file,  `fc  -W'  writes
+       the  history out to the given file, and `fc -A' appends the his-
+       tory out to the given file.  If no filename  is  specified,  the
+       $HISTFILE  is  assumed.   If  the -I option is added to -R, only
+       those events that are not already contained within the  internal
+       history  list are added.  If the -I option is added to -A or -W,
+       only  those  events  that  are  new   since   last   incremental
+       append/write  to  the history file are appended/written.  In any
+       case, the created file will have no more than $SAVEHIST entries.
+
+history
+       Same as fc -l.
+
+r      Same as fc -e -.

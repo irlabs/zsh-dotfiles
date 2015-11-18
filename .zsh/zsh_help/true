@@ -1,0 +1,2 @@
+true [ arg ... ]
+       Do nothing and return an exit code of 0.

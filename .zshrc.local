@@ -1,0 +1,22 @@
+#!/bin/zsh
+# .zshrc.local
+
+# List directory sizes                                                                       
+alias dul='sudo du -h -d 1'
+alias duk='sudo du -hk * | sort -n'
+
+# Go to the current directory
+alias .='cd `"pwd"`'
+
+# Git Aliases
+alias gs='git status '
+alias ga='git add '
+alias gaa='git add --all'
+alias gb='git branch '
+alias gc='git commit'
+alias go='git checkout '
+alias gd='git diff'
+alias gdt='git difftool'
+alias gdc='git difftool --cached'
+
+# ADD YOUR OWN ADDITIONS TO THE ZSH HERE

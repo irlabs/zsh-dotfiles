@@ -1,0 +1,22 @@
+#autoload
+
+precmd()
+{ 
+  psvar[1]=$#jobstates;
+  if [[ $psvar[1] -eq 0 ]] then
+    psvar[1]=()
+  elif [[ $psvar[1] -eq 1 ]] then
+    psvar[1]="$psvar[1] job"
+  else
+    psvar[1]="$psvar[1] jobs"
+  fi
+  [[ -n $TTY && $TERM == (xterm*|dtterm|rxvt|screen*) ]] &&
+    { 
+      print -nP "\e]1;%m:%.\x07"
+      print -nP "\e]2;%(1v. %1v |.)${WINTITLE:+ $WINTITLE |} %n@%m %~" # | %y"
+      [[ $TERM == screen* ]] && print -n .
+      print -n "\x07"
+    } > $TTY
+}
+
+TRAPCLD() { [[ -o interactive && -n $TTY ]] && precmd }

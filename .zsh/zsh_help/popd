@@ -1,0 +1,8 @@
+popd [ {+|-}n ]
+       Remove an entry from the directory stack, and perform  a  cd  to
+       the  new top directory.  With no argument, the current top entry
+       is removed.  An argument of the form  `+n'  identifies  a  stack
+       entry  by  counting  from the left of the list shown by the dirs
+       command, starting with zero.  An argument of the form -n  counts
+       from  the right.  If the PUSHD MINUS option is set, the meanings
+       of `+' and `-' in this context are swapped.

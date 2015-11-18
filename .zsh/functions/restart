@@ -1,0 +1,5 @@
+#autoload
+
+restart () {
+  exec zsh "$@"
+}

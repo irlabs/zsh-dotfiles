@@ -1,0 +1,35 @@
+trap [ arg [ sig ... ] ]
+       arg  is  a series of commands (usually quoted to protect it from
+       immediate evaluation by the shell) to be read and executed  when
+       the shell receives sig.  Each sig can be given as a number or as
+       the name of a signal.  If arg is `-', then  all  traps  sig  are
+       reset to their default values.  If arg is the empty string, then
+       this signal is ignored by the  shell  and  by  the  commands  it
+       invokes.
+
+       If sig is ZERR then arg will be executed after each command with
+       a nonzero exit status.  If sig is DEBUG then arg  will  be  exe-
+       cuted  after  each  command.   If  sig is 0 or EXIT and the trap
+       statement is executed inside the body of a  function,  then  the
+       command arg is executed after the function completes.  If sig is
+       0 or EXIT and the trap statement is not executed inside the body
+       of  a  function, then the command arg is executed when the shell
+       terminates.
+
+       The trap command with no arguments prints  a  list  of  commands
+       associated with each signal.
+
+       Note  that traps defined with the trap builtin are slightly dif-
+       ferent from those defined as `TRAPNAL () { ... }', as the latter
+       have  their  own function environment (line numbers, local vari-
+       ables, etc.) while the former use the environment of the command
+       in which they were called.  For example,
+
+              trap 'print $LINENO' DEBUG
+
+       will  print  the  line number of a command executed after it has
+       run, while
+
+              TRAPDEBUG() { print $LINENO; }
+
+       will always print the number zero.

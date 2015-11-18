@@ -1,0 +1,5 @@
+let arg ...
+       Evaluate  each arg as an arithmetic expression.  See the section
+       `Arithmetic Evaluation' for a description of arithmetic  expres-
+       sions.  The exit status is 0 if the value of the last expression
+       is nonzero, and 1 otherwise.

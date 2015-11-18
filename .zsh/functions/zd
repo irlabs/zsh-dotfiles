@@ -1,0 +1,8 @@
+#autoload
+
+# Function zd
+# builtin cd to name a directory within ${HOME}, and cd to it. 
+ 
+zd () {
+  builtin cd ~/"$1"
+}

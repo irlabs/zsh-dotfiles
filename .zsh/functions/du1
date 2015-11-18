@@ -1,0 +1,5 @@
+#autoload
+
+du1 () {
+  du "$@" | egrep -v '/.*/'
+}

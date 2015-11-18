@@ -1,0 +1,15 @@
+unhash [ -adfm ] name ...
+       Remove  the element named name from an internal hash table.  The
+       default is remove elements from the command hash table.  The  -a
+       option  causes  unhash  to remove aliases.  The -f option causes
+       unhash to remove shell functions.  The -d options causes  unhash
+       to  remove named directories.  If the -m flag is given the argu-
+       ments are taken as patterns (should be quoted) and all  elements
+       of  the  corresponding  hash  table  with matching names will be
+       removed.
+
+unalias
+       Same as unhash -a.
+
+unfunction
+       Same as unhash -f.

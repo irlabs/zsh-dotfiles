@@ -1,0 +1,22 @@
+alias [ {+|-}gmrL ] [ name[=value] ... ]
+       For  each  name with a corresponding value, define an alias with
+       that value.  A trailing space in value causes the next  word  to
+       be  checked  for  alias  expansion.   If the -g flag is present,
+       define a global alias; global aliases are expanded even if  they
+       do not occur in command position.
+
+       For  each  name  with no value, print the value of name, if any.
+       With no arguments, print all currently defined aliases.  If  the
+       -m  flag  is  given  the  arguments  are taken as patterns (they
+       should be quoted to preserve them from being interpreted as glob
+       patterns),  and the aliases matching these patterns are printed.
+       When printing aliases and the -g or -r flags are  present,  then
+       restrict  the  printing  to  global  or regular aliases, respec-
+       tively.  Using `+' instead of `-', or  ending  the  option  list
+       with a single `+', prevents the values of the aliases from being
+       printed.
+
+       If the -L flag is present, then print each  alias  in  a  manner
+       suitable  for  putting  in a startup script.  The exit status is
+       nonzero if a name (with no value) is given for  which  no  alias
+       has been defined.

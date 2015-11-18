@@ -1,0 +1,17 @@
+emulate [ -LR ] {zsh|sh|ksh|csh}
+       Set  up  zsh  options  to emulate the specified shell as much as
+       possible.  csh will never be fully emulated.  If the argument is
+       not  one  of  the  shells  listed  above,  zsh will be used as a
+       default; more precisely, the tests performed on the argument are
+       the  same  as  those  used to determine the emulation at startup
+       based on the shell name, see the section `Compatibility' in zsh-
+       misc(1)  .   If the -R option is given, all options are reset to
+       their default value corresponding  to  the  specified  emulation
+       mode,  except  for  certain  options  describing the interactive
+       environment; otherwise,  only  those  options  likely  to  cause
+       portability  problems  in scripts and functions are altered.  If
+       the  -L  option  is  given,  the   options   LOCAL OPTIONS   and
+       LOCAL TRAPS will be set as well, causing the effects of the emu-
+       late command and any setopt and trap commands to be local to the
+       immediately  surrounding  shell function, if any; normally these
+       options are turned off in all emulation modes except ksh.

@@ -28,3 +28,12 @@ Then you'll need to install these dotfiles in your root folder in order to use t
 	- `tar -xzf zsh_dotfiles.tar`
 	
 Then, from then on, every time you start a zsh shell, these dotfiles will be loaded and you can enjoy the nice colored prompt, handy shortcuts like `l` and `ll` and colored outputs for file lists, and, and ...
+
+## Use the Alt key as Meta key
+
+- In the **Terminal** app
+- open the **Preferences** window,
+- go to the **Profiles** tab.
+- Select the **Keyboard** section.
+- Make sure that all the profiles that you are using have:
+- the checkbox **Use Option as Meta key** enabled.

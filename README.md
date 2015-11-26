@@ -23,7 +23,7 @@ Then you'll need to install these dotfiles in your root folder in order to use t
 - Go to your root directory if you weren't there yet:
 	- `cd ~`
 - Download the dotfiles by:
-	- `curl -Lk https://github.com/irlabs/zsh-dotfiles/blob/master/zsh_dotfiles.tar?raw=true > zsh_dotfiles.tar`
+	- `curl -Lk https://github.com/irlabs/zsh-dotfiles/blob/master/zsh_dotfiles.tar > zsh_dotfiles.tar`
 - Unpack and install the dotfiles:
 	- `tar -xzf zsh_dotfiles.tar`
 	

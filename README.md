@@ -3,9 +3,11 @@
 These are my extremely useful dotfiles for the **zsh** shell.
 (Dotfiles are hidden files, whose filenames start with a `.` dot. The dotfiles are sourced whenever you start a command line session. And these dotfiles are really useful, containing a lot of smart things, shortscuts and nice colors.)
 
-## Installing zsh as your default shell
+These instructions can be applied to both the **Terminal** app or the **iTerm** app.
 
-(On Mac OS X)
+## Step 1: install **zsh** as your default shell
+
+### On macOS's **Terminal** app
 
 - Start the **Terminal** app
 - open the **Preferences** window,
@@ -14,9 +16,20 @@ These are my extremely useful dotfiles for the **zsh** shell.
 - select "**Command (complete path)**"
 - and type: `/bin/zsh`
 
-From then on, every Terminal window or tab you'll open, will be starting the zsh shell. Hurray!
+### On **iTerm2** app
 
-## Installing the dot files in your root folder
+- Start the **iTerm** app
+- open the **Preferences** window,
+- go to the **Profiles** tab,
+- select the Profile that you want to modify (or create a new Profile, and *Set as Default*)
+- the **General** tab.
+- Under the "**Command**" haeder,
+- select "**Command:**"
+- and type: `/bin/zsh --login`
+
+From then on, every new Terminal or iTerm window or tab you'll open, will be starting the zsh shell. Hurray!
+
+## Step 2: install the *dot files* in your root folder
 
 Then you'll need to install these dotfiles in your root folder in order to use them:
 
@@ -29,7 +42,9 @@ Then you'll need to install these dotfiles in your root folder in order to use t
 	
 Then, from then on, every time you start a zsh shell, these dotfiles will be loaded and you can enjoy the nice colored prompt, handy shortcuts like `l` and `ll` and colored outputs for file lists, and, and ...
 
-## Use the Alt key as Meta key
+## Step 3: Set up the **Alt + .** key
+
+### In macOS's **Terminal**: Use the Alt key as Meta key
 
 - In the **Terminal** app
 - open the **Preferences** window,
@@ -37,3 +52,15 @@ Then, from then on, every time you start a zsh shell, these dotfiles will be loa
 - Select the **Keyboard** section.
 - Make sure that all the profiles that you are using have:
 - the checkbox **Use Option as Meta key** enabled.
+
+### In the **iTerm2** app
+
+- In the **iTerm** app
+- open the **Preferences** window,
+- go to the **Keys** tab,
+- click the **+** button to create a new *Key Mapping*
+	- As *Keyboard Shortcut* set **Alt + .**
+	- As *Action* choose **Send Escape Sequence** 
+	- As *Esc+* set **.**
+
+![iTerm Key Mapping Settings](images/iTermAltDotSettings.png)

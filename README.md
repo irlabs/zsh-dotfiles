@@ -65,6 +65,8 @@ Then, from then on, every time you start a zsh shell, these dotfiles will be loa
 
 ![iTerm Key Mapping Settings](images/iTermAltDotSettings.png)
 
+### Usage of the **Alt + .** key
+
 Once you changed these settings for the Alt key, (or specifically for Alt + . ) you can use **Alt + .** to repeat the *last part* of your *previous* commands. E.g. If you type
 
 ```zsh

@@ -7,7 +7,7 @@ These instructions can be applied to both the **Terminal** app or the **iTerm** 
 
 ## Step 1: install **zsh** as your default shell
 
-### On macOS's **Terminal** app
+### option A: in macOS's **Terminal** app
 
 - Start the **Terminal** app
 - open the **Preferences** window,
@@ -16,7 +16,7 @@ These instructions can be applied to both the **Terminal** app or the **iTerm** 
 - select "**Command (complete path)**"
 - and type: `/bin/zsh`
 
-### On **iTerm2** app
+### option B: in **iTerm2** app
 
 - Start the **iTerm** app
 - open the **Preferences** window,
@@ -44,7 +44,7 @@ Then, from then on, every time you start a zsh shell, these dotfiles will be loa
 
 ## Step 3: Set up the **Alt + .** key
 
-### In macOS's **Terminal**: Use the Alt key as Meta key
+### option A: in macOS's **Terminal**: Use the Alt key as Meta key
 
 - In the **Terminal** app
 - open the **Preferences** window,
@@ -53,7 +53,7 @@ Then, from then on, every time you start a zsh shell, these dotfiles will be loa
 - Make sure that all the profiles that you are using have:
 - the checkbox **Use Option as Meta key** enabled.
 
-### In the **iTerm2** app
+### option B: in the **iTerm2** app
 
 - In the **iTerm** app
 - open the **Preferences** window,
@@ -64,3 +64,29 @@ Then, from then on, every time you start a zsh shell, these dotfiles will be loa
 	- As *Esc+* set **.**
 
 ![iTerm Key Mapping Settings](images/iTermAltDotSettings.png)
+
+Once you changed these settings for the Alt key, (or specifically for Alt + . ) you can use **Alt + .** to repeat the *last part* of your *previous* commands. E.g. If you type
+
+```zsh
+touch my_new_test_file.txt
+```
+
+(This command creates a new empty file, called _my_new_test_file.txt_ or if that one already exists, updates the modification date.)
+
+Then as the next command you might want to open it in the default app with `open`. To do this you can type
+
+```zsh
+open 
+```
+
+, followed by **Alt + .**
+
+The **Alt + .** will repeat the last part of the previous command, in this case the file name `my_new_test_file.txt` so your command becomes
+
+```zsh
+open my_new_test_file.txt
+```
+
+Repeat **Alt + .** to browse through your whole history of commands.
+
+Useful!
